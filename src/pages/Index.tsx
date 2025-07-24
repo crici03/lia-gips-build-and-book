@@ -126,8 +126,8 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      {/* Header - Hidden */}
+      <header className="hidden">
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-3">
             <img 
@@ -173,13 +173,25 @@ const Index = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-24 px-4 overflow-hidden">
+      <section className="relative py-16 px-4 overflow-hidden">
         <div 
           className="absolute inset-0 z-0"
           style={{
             background: `var(--hero-gradient), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>')`
           }}
         />
+        
+        {/* Company Logo - Full Width */}
+        <div className="w-full bg-white/10 backdrop-blur-sm py-6 mb-8 relative z-10">
+          <div className="container">
+            <img 
+              src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
+              alt="Lia Gips GmbH Logo" 
+              className="w-full max-w-2xl mx-auto h-auto"
+            />
+          </div>
+        </div>
+
         <div className="container relative z-10 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Ihr Partner für präzise <br />
