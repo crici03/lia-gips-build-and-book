@@ -133,7 +133,7 @@ const Index = () => {
             <img 
               src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
               alt="Lia Gips GmbH Logo" 
-              className="h-12 w-auto"
+              className="h-16 w-auto"
             />
           </div>
           <nav className="hidden md:flex items-center gap-6">
@@ -406,7 +406,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
                 alt="Lia Gips GmbH Logo" 
-                className="h-12 w-auto mb-4 brightness-0 invert"
+                className="h-16 w-auto mb-4 brightness-0 invert"
               />
               <p className="text-white/80 text-sm">
                 Ihr Partner für präzise Bau- und Renovierungsarbeiten. 
