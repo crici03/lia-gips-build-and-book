@@ -421,7 +421,7 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
                 alt="Lia Gips GmbH Logo" 
-                className="h-16 w-auto mb-4 filter contrast-100"
+                className="h-16 w-auto mb-4"
                 style={{ filter: 'brightness(0) invert(1)' }}
               />
               <p className="text-white/80 text-sm">
