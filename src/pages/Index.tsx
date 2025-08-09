@@ -181,27 +181,28 @@ const Index = () => {
           }}
         />
         
-        {/* Company Logo - Full Width */}
-        <div className="w-full bg-white/10 backdrop-blur-sm py-6 mb-8 relative z-10">
-          <div className="container">
-            <img 
-              src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
-              alt="Lia Gips GmbH Logo" 
-              className="w-full max-w-2xl mx-auto h-auto"
-            />
-          </div>
-        </div>
-
-        <div className="container relative z-10 text-center">
-          <h1 className="text-3xl md:text-6xl font-bold text-white mb-6 leading-tight">
-            Ihr Partner für präzise <br />
-            <span className="text-construction-light">Bau- und Renovierungsarbeiten</span>
-          </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto">
-            Bei der Lia Gips GmbH dreht sich alles um Qualität, Handwerk und Kundenzufriedenheit. 
-            Mit Leidenschaft und Erfahrung bieten wir exzellente Dienstleistungen.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="container relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-8">
+            {/* Logo - smaller and positioned left */}
+            <div className="flex-shrink-0">
+              <img 
+                src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
+                alt="Lia Gips GmbH Logo" 
+                className="h-32 w-auto"
+              />
+            </div>
+            
+            {/* Text content - left aligned on larger screens */}
+            <div className="text-center lg:text-left flex-1">
+              <h1 className="text-3xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                Ihr Partner für präzise <br />
+                <span className="text-construction-light">Bau- und Renovierungsarbeiten</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-white/90 mb-8 lg:max-w-none max-w-3xl mx-auto lg:mx-0">
+                Bei der Lia Gips GmbH dreht sich alles um Qualität, Handwerk und Kundenzufriedenheit. 
+                Mit Leidenschaft und Erfahrung bieten wir exzellente Dienstleistungen.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button 
               variant="hero" 
               size="lg"
@@ -214,10 +215,12 @@ const Index = () => {
               variant="outline" 
               size="lg"
               onClick={() => scrollToSection('services')}
-              className="border-white text-white hover:bg-white hover:text-construction-primary"
+              className="border-white text-white bg-transparent hover:bg-white hover:text-construction-primary"
             >
               Unsere Leistungen
-            </Button>
+              </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -458,7 +461,7 @@ const Index = () => {
           </div>
           
           <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm text-white/60">
-            <p>&copy; 2024 Lia Gips GmbH. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2025 Lia Gips GmbH. Alle Rechte vorbehalten.</p>
           </div>
         </div>
       </footer>
