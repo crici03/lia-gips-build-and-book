@@ -215,10 +215,10 @@ const Index = () => {
               variant="outline" 
               size="lg"
               onClick={() => scrollToSection('services')}
-              className="border-white text-white bg-transparent hover:bg-white hover:text-construction-primary"
+              className="border-white text-construction-primary bg-white hover:bg-construction-light hover:text-construction-dark"
             >
               Unsere Leistungen
-              </Button>
+            </Button>
               </div>
             </div>
           </div>
