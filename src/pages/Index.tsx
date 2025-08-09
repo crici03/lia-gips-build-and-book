@@ -188,7 +188,8 @@ const Index = () => {
               <img 
                 src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
                 alt="Lia Gips GmbH Logo" 
-                className="h-32 w-auto"
+                className="h-40 w-auto"
+                style={{ objectFit: 'cover', objectPosition: 'center' }}
               />
             </div>
             
