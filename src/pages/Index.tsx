@@ -422,7 +422,7 @@ const Index = () => {
                 src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
                 alt="Lia Gips GmbH Logo" 
                 className="h-32 w-auto mb-4"
-                style={{ filter: 'brightness(0) invert(1)' }}
+                style={{ filter: 'brightness(0) invert(1) brightness(10)' }}
               />
               <p className="text-white/80 text-sm">
                 Ihr Partner für präzise Bau- und Renovierungsarbeiten. 
