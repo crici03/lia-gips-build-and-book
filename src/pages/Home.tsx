@@ -7,19 +7,23 @@ const Home: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative py-32 px-4 overflow-hidden">
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
         <div 
           className="absolute inset-0 z-0"
           style={{
-            background: `var(--hero-gradient), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="white" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>')`
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/lovable-uploads/a80b558f-8139-48a1-ba6e-ea1be000dc9f.png')`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat'
           }}
         />
         
-        <div className="container relative z-10">
-          <div className="flex flex-col items-center text-center">
+        <div className="container relative z-10 px-4">
+          <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
             {/* Logo Container - Organic Shape */}
-            <div className="relative mb-8">
+            <div className="relative mb-12">
               <div 
                 className="relative bg-white p-8 md:p-12"
                 style={{
@@ -36,37 +40,29 @@ const Home: React.FC = () => {
               </div>
             </div>
             
-            {/* Company Name and Slogan */}
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                Lia Gips GmbH
+            {/* Main Text - Inspired by Orhan Layout */}
+            <div className="mb-16">
+              <h1 className="text-5xl md:text-8xl font-bold text-white mb-6 leading-tight tracking-wide">
+                <span className="text-construction-primary">LIA GIPS.</span>
               </h1>
-              <p className="text-xl md:text-2xl text-white/90 mb-8">
-                Ihr Partner für präzise Bau- und Renovierungsarbeiten
-              </p>
-              <p className="text-lg text-white/80 mb-12 max-w-2xl mx-auto">
-                Bei der Lia Gips GmbH dreht sich alles um Qualität, Handwerk und Kundenzufriedenheit. 
-                Mit Leidenschaft und Erfahrung bieten wir exzellente Dienstleistungen.
+              <h2 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+                BAULEISTUNGEN
+              </h2>
+              <h3 className="text-3xl md:text-5xl font-bold text-white/90 mb-12 leading-tight">
+                GLASKLAR.
+              </h3>
+              
+              <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Um die Bedürfnisse rund um Ihre Bauprojekte optimal erfüllen zu können, bieten wir eine Reihe von hochwertigen Dienstleistungen an.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button 
-                  variant="hero" 
-                  size="lg"
-                  onClick={() => navigate('/kontakt')}
-                  className="bg-white text-construction-primary hover:bg-construction-light hover:text-construction-dark"
-                >
-                  Jetzt Termin vereinbaren
-                </Button>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  onClick={() => navigate('/verputzarbeiten')}
-                  className="border-white text-white bg-transparent hover:bg-white hover:text-construction-primary"
-                >
-                  Unsere Leistungen
-                </Button>
-              </div>
+              <Button 
+                onClick={() => navigate('/kontakt')}
+                className="bg-construction-primary hover:bg-construction-dark text-white px-8 py-4 text-lg font-semibold"
+                size="lg"
+              >
+                Kontaktiere uns
+              </Button>
             </div>
           </div>
         </div>
