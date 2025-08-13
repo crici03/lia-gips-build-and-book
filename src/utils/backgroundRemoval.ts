@@ -73,7 +73,7 @@ export const removeBackground = async (imageElement: HTMLImageElement): Promise<
     // Draw original image
     outputCtx.drawImage(canvas, 0, 0);
     
-    // Apply the mask
+    // Apply the mask with better precision
     const outputImageData = outputCtx.getImageData(
       0, 0,
       outputCanvas.width,
@@ -81,10 +81,11 @@ export const removeBackground = async (imageElement: HTMLImageElement): Promise<
     );
     const data = outputImageData.data;
     
-    // Apply inverted mask to alpha channel
+    // Apply more aggressive background removal
     for (let i = 0; i < result[0].mask.data.length; i++) {
-      // Invert the mask value (1 - value) to keep the subject instead of the background
-      const alpha = Math.round((1 - result[0].mask.data[i]) * 255);
+      const maskValue = result[0].mask.data[i];
+      // More aggressive threshold - anything above 0.1 is considered background
+      const alpha = maskValue > 0.1 ? 0 : 255;
       data[i * 4 + 3] = alpha;
     }
     
