@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 
-const Home = () => {
+const Home: React.FC = () => {
   const navigate = useNavigate();
 
   return (

@@ -1,17 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { 
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu';
 import { cn } from '@/lib/utils';
 
-const Navigation = () => {
+const Navigation: React.FC = () => {
   const location = useLocation();
 
   const isActive = (path: string) => location.pathname === path;
@@ -39,58 +31,45 @@ const Navigation = () => {
             <span className="font-bold text-xl">Lia Gips GmbH</span>
           </Link>
 
-          {/* Navigation */}
-          <NavigationMenu className="hidden lg:flex">
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="bg-transparent text-white hover:bg-white/10 data-[state=open]:bg-white/10">
-                  Leistungen
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <div className="grid w-[400px] gap-3 p-4">
-                    {services.map((service) => (
-                      <Link
-                        key={service.path}
-                        to={service.path}
-                        className={cn(
-                          "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground",
-                          isActive(service.path) ? "bg-accent text-accent-foreground" : ""
-                        )}
-                      >
-                        <div className="text-sm font-medium leading-none">{service.name}</div>
-                      </Link>
-                    ))}
-                  </div>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              
-              <NavigationMenuItem>
-                <Link 
-                  to="/ueber-uns"
-                  className={cn(
-                    navigationMenuTriggerStyle(),
-                    "bg-transparent text-white hover:bg-white/10",
-                    isActive("/ueber-uns") ? "bg-white/20" : ""
-                  )}
-                >
-                  Über uns
-                </Link>
-              </NavigationMenuItem>
-              
-              <NavigationMenuItem>
-                <Link 
-                  to="/kontakt"
-                  className={cn(
-                    navigationMenuTriggerStyle(),
-                    "bg-transparent text-white hover:bg-white/10",
-                    isActive("/kontakt") ? "bg-white/20" : ""
-                  )}
-                >
-                  Kontakt
-                </Link>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
+          {/* Simple Navigation */}
+          <nav className="hidden lg:flex items-center gap-6">
+            <div className="relative group">
+              <button className="text-white hover:text-white/80 font-medium">
+                Leistungen
+              </button>
+              <div className="absolute top-full left-0 bg-white shadow-lg rounded-md py-2 min-w-[200px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                {services.map((service) => (
+                  <Link
+                    key={service.path}
+                    to={service.path}
+                    className="block px-4 py-2 text-construction-dark hover:bg-construction-light/50 transition-colors"
+                  >
+                    {service.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+            
+            <Link 
+              to="/ueber-uns"
+              className={cn(
+                "text-white hover:text-white/80 font-medium transition-colors",
+                isActive("/ueber-uns") ? "text-white/90" : ""
+              )}
+            >
+              Über uns
+            </Link>
+            
+            <Link 
+              to="/kontakt"
+              className={cn(
+                "text-white hover:text-white/80 font-medium transition-colors",
+                isActive("/kontakt") ? "text-white/90" : ""
+              )}
+            >
+              Kontakt
+            </Link>
+          </nav>
 
           {/* Mobile menu button */}
           <Button 
