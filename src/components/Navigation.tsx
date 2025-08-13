@@ -22,12 +22,12 @@ const Navigation: React.FC = () => {
       <div className="mx-8 mt-4">
         <div className="bg-construction-primary text-white shadow-lg rounded-lg px-6">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link to="/" className="flex items-center gap-3">
+            {/* Logo - Enlarged LG only */}
+            <Link to="/" className="flex items-center">
               <img 
                 src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
-                alt="Lia Gips GmbH Logo" 
-                className="h-12 w-auto"
+                alt="LG Logo" 
+                className="h-20 w-auto"
               />
             </Link>
 
