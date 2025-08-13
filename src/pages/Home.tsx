@@ -30,11 +30,6 @@ const Home: React.FC = () => {
               <h2 className="text-3xl md:text-5xl font-bold text-construction-primary mb-12 leading-tight">
                 DIESE GIPSEREI IST EINZIGARTIG
               </h2>
-              
-              <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Bei der Lia Gips GmbH dreht sich alles um Qualität, Handwerk und Kundenzufriedenheit. 
-                Mit Leidenschaft und Erfahrung bieten wir exzellente Dienstleistungen.
-              </p>
             </div>
           </div>
         </div>

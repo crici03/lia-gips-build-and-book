@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import LogoProcessor from './LogoProcessor';
 
 const Navigation: React.FC = () => {
   const location = useLocation();
@@ -24,15 +25,11 @@ const Navigation: React.FC = () => {
           <div className="flex items-center justify-between h-16">
             {/* Logo - Enlarged LG only */}
             <Link to="/" className="flex items-center">
-              <img 
-                src="/lovable-uploads/f4173ebd-f9b0-470f-bc1e-53f1a4a00a33.png" 
-                alt="LG Logo" 
-                className="h-20 w-auto"
-              />
+              <LogoProcessor />
             </Link>
 
-            {/* Simple Navigation */}
-            <nav className="hidden lg:flex items-center gap-6">
+            {/* Centered Navigation */}
+            <nav className="hidden lg:flex items-center gap-6 flex-1 justify-center">
               <div className="relative group">
                 <button className="text-white hover:text-white/80 font-medium">
                   Leistungen
