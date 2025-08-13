@@ -36,15 +36,15 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 345 85% 47%;
 
-    --construction-primary: 345 75% 45%;
+    --construction-primary: 345 80% 35%;
     --construction-light: 345 25% 90%;
-    --construction-dark: 345 75% 25%;
-    --construction-gradient: linear-gradient(135deg, hsl(345 75% 45%), hsl(345 75% 35%));
-    --hero-gradient: linear-gradient(135deg, hsl(345 75% 45% / 0.95), hsl(345 75% 25% / 0.95));
+    --construction-dark: 345 80% 20%;
+    --construction-gradient: linear-gradient(135deg, hsl(345 80% 35%), hsl(345 80% 25%));
+    --hero-gradient: linear-gradient(135deg, hsl(345 80% 35% / 0.95), hsl(345 80% 20% / 0.95));
     --section-bg: 220 14.3% 97%;
     
-    --shadow-soft: 0 4px 12px -2px hsl(345 75% 45% / 0.08);
-    --shadow-medium: 0 8px 25px -5px hsl(345 75% 45% / 0.15);
+    --shadow-soft: 0 4px 12px -2px hsl(345 80% 35% / 0.08);
+    --shadow-medium: 0 8px 25px -5px hsl(345 80% 35% / 0.15);
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --radius: 0.5rem;
